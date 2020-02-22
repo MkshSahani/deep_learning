@@ -1,5 +1,4 @@
-#!/usr/bin/python3
-## linearregreesion.py 
+
 
 import numpy as np
 import pandas as pd
