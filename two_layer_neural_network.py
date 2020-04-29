@@ -26,6 +26,7 @@ def init_weights(input_size, hidden_size):
     weights['B2'] = np.random.randn(1, 1)
     return weights
 
+
 def forward_loss(X, y, weights):
 
     M1 = np.dot(X, weights['W1'])
@@ -99,7 +100,6 @@ if __name__ == '__main__':
                [3, 4, 1], [4, 3, 2], [5, 3, 2]]
     y_train = [[9], [9], [10], [8], [9.5], [12]]
 
-
     x_train = np.array(x_train)
     y_train = np.array(y_train)
     print(x_train)
@@ -115,3 +115,4 @@ if __name__ == '__main__':
     plt.scatter(x_train_data, y_train.flatten())
     plt.plot(x_train_data, predict.flatten(), 'r')
     plt.show()
+# is your plot is correct. 
