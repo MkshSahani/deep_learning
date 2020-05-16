@@ -15,8 +15,7 @@ def sigmoid(x):
 @param2 : hidden_size -> give the number of the eneries in the hidden layer. 
 @return : weights -> return the random init. weights of given dimension. 
 
-""""
-
+"""
 
 def init_weights(input_size, hidden_size):
     weights = {}
@@ -65,7 +64,7 @@ def loss_gradients(forward_info, weights):
     dLdM1 = dLdN1 * dN1dM1
     dM1dW1 = np.transpose(forward_info['X'], (1, 0))
     dLdW1 = np.dot(dM1dW1, dLdM1)
-    loss_gradients: Dict[str, ndarray] = {}
+    loss_gradients= {}
     loss_gradients['W2'] = dLdW2
     loss_gradients['B2'] = dLdB2
     loss_gradients['W1'] = dLdW1
