@@ -1,7 +1,7 @@
 from operation import *
 
 
-class ParamOPeration(Operation):
+class ParamOperation(Operation):
 
     def __init__(self, param):
         super().__init__()
@@ -16,7 +16,7 @@ class ParamOPeration(Operation):
         assert_same_shape(self.ouput, output_grad)
 
         self.input_grad = self._input_grad(output_grad)
-        self.param_grad = self_param_grad(output_grad)
+        self.param_grad = self._param_grad(output_grad)
 
         assert_same_shape(self.input_, self.input_grad)
         assert_same_shape(self.param, self.param_grad)

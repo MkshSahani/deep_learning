@@ -1,6 +1,6 @@
 # operation.py
 
-
+ 
 class Operation:
     # base class for an operation in neural network.
     def __init__(self):
