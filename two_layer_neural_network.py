@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 
 # sigmoid function to add the nolinearity in the model.
 
-
 def sigmoid(x):
     return 1 / (1 + np.exp(-1.0 * x))
 
@@ -95,23 +94,3 @@ def predict(X, weights):
 
 
 if __name__ == '__main__':
-    x_train = [[3, 4, 5], [3, 5, 6], [4, 6, 7],
-               [3, 4, 1], [4, 3, 2], [5, 3, 2]]
-    y_train = [[9], [9], [10], [8], [9.5], [12]]
-
-    x_train = np.array(x_train)
-    y_train = np.array(y_train)
-    print(x_train)
-    print(y_train)
-
-    weights = train(x_train, y_train, hidden_size=3)
-    print(weights)
-
-    predict = predict(x_train, weights)
-    print(predict)
-    x_train_data = [i[0] for i in x_train]
-    plt.title("2 layer neural network.")
-    plt.scatter(x_train_data, y_train.flatten())
-    plt.plot(x_train_data, predict.flatten(), 'r')
-    plt.show()
-# is your plot is correct. 

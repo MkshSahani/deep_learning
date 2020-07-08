@@ -1,16 +1,12 @@
 
-
 import numpy as np
-import pandas as pd
 import matplotlib.pyplot as plt
 
 ## forward pass process
 def forward_pass(x_batch, y_batch, weights):
     N = np.dot(x_batch, weights['W'])
     P = N +  weights['B']
-
     loss = np.mean(np.power(y_batch - P, 2))
-
     forward_info = {}
     forward_info['X'] = x_batch
     forward_info['Y'] = y_batch
@@ -56,26 +52,18 @@ def predict(x_input, weights):
 
 
 if __name__ == '__main__':
-    data_csv = pd.read_csv('data_linear_regression.csv')
-    x_input = data_csv.iloc[:,0].values
-    plot_input = x_input
-    x_input = np.array(x_input)
-    x_input = x_input.reshape(x_input.shape[0], 1)
-    print(x_input)
-    y_output = data_csv.iloc[:,1].values 
-    plot_output = y_output
-    y_output = np.array(y_output)
-    y_output = y_output.reshape(y_output.shape[0], 1)
-    print(y_output)
-    train_info = train(x_input, y_output)
-    print(train_info)
-    predicted_value = predict([2], train_info[0])
-    print(predicted_value)
-    predicted_data = [i for i in range(0, 11)]
-    label_predict = predicted_data 
-    predicted_data = [[i] for i in predicted_data]
-    predicted_data = np.array(predicted_data)
-    predict_values = predict(predicted_data, train_info[0])
-    plt.scatter(plot_input, plot_output)
-    plt.plot(predicted_data, predict_values.flatten(), 'b')
+    input_ = [i for i in range(0, 15)]
+    output_ = [5 * i + 2 if i % 2 == 0 else 4 * i + 9 for i in range(0, 15)]
+    input_ = [[i] for i in input_]
+    output_ = [[i] for i in output_]
+    input_ = np.array(input_)
+    output_ = np.array(output_)
+    # print(input_)
+    print(output_)
+    weight = train(input_, output_)
+    print(weight)
+    predict_ = predict(input_, weight[0])
+    print(predict_)
+    plt.scatter(input_, output_)
+    plt.plot(input_, predict_,'g')
     plt.show()
