@@ -1,6 +1,7 @@
 # operation.py
+from utils import *
 
- 
+
 class Operation:
     # base class for an operation in neural network.
     def __init__(self):
@@ -9,7 +10,7 @@ class Operation:
     def forward(self, input_):
         # store input in self._input instance and call self._output
         self.input_ = input_
-        self.output = self._ouput()
+        self.output = self._output()
         return self.output
 
     def backward(self, output_grad):

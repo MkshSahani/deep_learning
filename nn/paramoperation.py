@@ -13,7 +13,7 @@ class ParamOperation(Operation):
         # call the self._input_grad
         # call the self._param_grad
 
-        assert_same_shape(self.ouput, output_grad)
+        assert_same_shape(self.output, output_grad)
 
         self.input_grad = self._input_grad(output_grad)
         self.param_grad = self._param_grad(output_grad)
