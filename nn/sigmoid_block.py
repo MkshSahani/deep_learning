@@ -1,7 +1,7 @@
 # sigmoid_block.py
 
-from opeartion import * 
-import numpy as np 
+from operation import *
+import numpy as np
 
 
 class SigMoid(Operation):
@@ -15,5 +15,3 @@ class SigMoid(Operation):
         sigmoid_backward = self.output * (1 - self.ouput)
         input_grad = sigmoid_backward * output_grad
         return input_grad
-
-     
