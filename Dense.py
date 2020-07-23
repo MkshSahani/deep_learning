@@ -11,10 +11,10 @@ import numpy as np
 class Dense(Layer):
 
     def __init__(self, neurons, activation=SigMoid()):
-        super().__init__()
+        super().__init__(neurons)
 
         self.activation = activation
-
+        self.seed = True 
     def _setup_layer(self, input_):
         # fully connected layer
 

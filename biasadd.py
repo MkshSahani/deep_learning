@@ -15,7 +15,7 @@ class BiasAdd(ParamOperation):
         return self.input_ + self.param
 
     def _input_grad(self, output_grad):
-        return np.ones_like(self._input)*output_grad
+        return np.ones_like(self.input_)*output_grad
 
     def _param_grad(self, output_grad):
-        return np.ones_like(self.param) * output_grad
+        return np.ones_like(self.param) * output_grad.sum(axis = 0)

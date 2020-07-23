@@ -22,6 +22,8 @@ class Operation:
 
         assert_same_shape(self.input_, self.input_grad)
 
+        return self.input_grad
+
     def _output(self):
         # output must be define for each operation
         raise NotImplementedError()

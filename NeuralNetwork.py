@@ -55,4 +55,4 @@ class NeuralNetwork:
         Gets the gradient of the loss with respect to the parameters for the network.
         '''
         for layer in self.layers:
-            yield from layer.param_grads 
+            yield from layer.param_grad
