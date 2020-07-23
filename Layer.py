@@ -38,12 +38,12 @@ class Layer:
         return self.output
 
     def backward(self, output_grad):
-        print("==output grad")
-        print(output_grad)
-        print("===self. output")
-        print(self.output)
+        # print("==output grad")
+        # print(output_grad)
+        # print("===self. output")
+        # print(self.output)
         assert_same_shape(self.output, output_grad)
-        print("=== same shape")
+        # print("=== same shape")
         for opeartion in reversed(self.operations):
             output_grad = opeartion.backward(output_grad)
         input_grad = output_grad

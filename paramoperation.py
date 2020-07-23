@@ -24,10 +24,10 @@ class ParamOperation(Operation):
         # print(self.param)
         # print("=== this is self.param_grad")
         # print(type(self))
-        print(self.param_grad)
+        # print(self.param_grad)
         assert_same_shape(self.param, self.param_grad)
-        print("== = self input _grand")
-        print(self.input_grad)
+        # print("== = self input _grand")
+        # print(self.input_grad)
         return self.input_grad
 
     def _param_grad(self, output_grad):

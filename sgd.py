@@ -5,10 +5,9 @@ class SGD(Optimizer):
     Stochasitc gradient descent optimizer.
     '''    
     def __init__(self,
-                 net,lr =  0.01):
+                 lr =  0.01):
         '''Pass'''
-        super().__init__(lr)
-        self.net = net 
+        super().__init__(lr) 
 
     def step(self):
         '''
