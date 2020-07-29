@@ -1,7 +1,8 @@
 from copy import deepcopy
 from typing import Tuple
 import numpy as np 
-from utils import * 
+from utils import *
+
 
 class Trainer:
     '''

@@ -4,10 +4,11 @@ class SGD(Optimizer):
     '''
     Stochasitc gradient descent optimizer.
     '''    
-    def __init__(self,
+    def __init__(self,net, 
                  lr =  0.01):
         '''Pass'''
         super().__init__(lr) 
+        self.net = net 
 
     def step(self):
         '''
