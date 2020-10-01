@@ -7,10 +7,10 @@ from weightmultiply import *
 from biasadd import *
 import numpy as np
 
-
+# Fully Conneced Layer in Neural Network.
 class Dense(Layer):
 
-    def __init__(self, neurons, activation=SigMoid()):
+    def __init__(self, neurons, activation=SigMoid()): # pass number of neurons and Acitivation funtion. 
         super().__init__(neurons)
 
         self.activation = activation
