@@ -5,7 +5,7 @@ from paramoperation import *
 # Layer class 2nd class of abstraction
 
 
-class Layer:
+class Layer(object):
 
     def __init__(self, neurons):
         self.neurons = neurons
@@ -22,7 +22,7 @@ class Layer:
 
         raise NotImplementedError()
 
-    def forward(self, input_):
+    def forward(self, input_) -> any:
 
         if self.first:
             self._setup_layer(input_)
@@ -37,7 +37,7 @@ class Layer:
 
         return self.output
 
-    def backward(self, output_grad):
+    def backward(self, output_grad) -> any:
         # print("==output grad")
         # print(output_grad)
         # print("===self. output")
